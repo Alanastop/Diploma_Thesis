@@ -1,0 +1,306 @@
+MAP
+  CONFIG "PROJ_LIB" "C:\ms4w\proj\nad"
+  CONFIG "GDAL_DATA" "C:\ms4w\gdaldata"
+  CONFIG "MS_ERRORFILE" "/ms4w/tmp/msn_error.txt"
+  CONFIG "CPL_DEBUG" "ON"
+  CONFIG "PROJ_DEBUG" "ON"
+  EXTENT -180.770166721006 -1.194427889792 175.318734275831 50.169786758997
+  IMAGETYPE "png"
+  NAME "Min"
+  
+  SIZE 1580 905
+  STATUS ON
+  UNITS METERS
+ 
+
+
+  SYMBOL
+    NAME 'circle'
+    TYPE ELLIPSE
+    POINTS 1 1 END
+    FILLED TRUE
+  END
+
+  SYMBOL
+    NAME 'star'
+    TYPE VECTOR
+    FILLED TRUE
+    POINTS
+      0 .375
+      .35 .375
+      .5 0
+      .65 .375
+      1 .375
+      .75 .625
+      .875 1
+      .5 .75
+      .125 1
+      .25 .625
+    END
+  END 
+
+
+  OUTPUTFORMAT
+    NAME "png"
+    MIMETYPE "image/png"
+    DRIVER "AGG/PNG"
+    EXTENSION "png"
+    IMAGEMODE RGB
+    TRANSPARENT FALSE
+  END # OUTPUTFORMAT
+
+  PROJECTION
+    "init=epsg:4326"
+  END # PROJECTION
+  LEGEND
+    KEYSIZE 20 10
+    KEYSPACING 5 5
+    LABEL
+      SIZE MEDIUM
+      OFFSET 0 0
+      SHADOWSIZE 1 1
+      TYPE BITMAP
+    END # LABEL
+    STATUS OFF
+  END # LEGEND
+
+  QUERYMAP
+    SIZE -1 -1
+    STATUS OFF
+    STYLE HILITE
+  END # QUERYMAP
+
+  SCALEBAR
+    INTERVALS 4
+    LABEL
+      SIZE MEDIUM
+      OFFSET 0 0
+      SHADOWSIZE 1 1
+      TYPE BITMAP
+    END # LABEL
+    SIZE 200 3
+    STATUS OFF
+    UNITS MILES
+  END # SCALEBAR
+
+   WEB
+    
+    IMAGEPATH "/ms4w/tmp/ms_tmp\\"
+    METADATA
+      "wms_srs" "EPSG:4326"
+      "wms_onlineresource"  "http://localhost:100/fcgi-bin/mapserv.exe?map=C:\\ms4w\app\\CA_ENCs\\ENC_ROOT\\Cal.map&"
+      "wms_enable_request"  "*"
+      "tms_enable_request"  "*"
+
+      "mapmanager_version"  "1.0.0.0"
+      "ows_enable_request"  "*"
+      "wms_title" "WMS Demo Server"
+      "tms_title" "TMS"
+    END # METADATA
+  END # WEB
+
+  LAYER
+    CONNECTION "C:\\ms4w\apps\\CA_ENCs\\ENC_ROOT\\US1EEZ1M\\US1EEZ1M.000"
+    CONNECTIONTYPE OGR
+    DATA "DEPARE"
+    EXTENT 138.835426 8.953691 173.227561 24.761043
+    METADATA
+      "ows_enable_request"	"*"
+      "wms_enable_request"	"*"
+      "wms_title"	"AEPARE"
+    END # METADATA
+    NAME "AEPARE"
+
+    STATUS OFF
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      STYLE
+        COLOR 247 237 219
+        OUTLINECOLOR 120 120 120
+      END # STYLE
+    END # CLASS
+  END # LAYER
+
+
+  LAYER
+    CONNECTION "C:\\ms4w\apps\\CA_ENCs\\ENC_ROOT\\US1PO02M\\US1PO02M.000"
+    CONNECTIONTYPE OGR
+    DATA "DEPARE"
+    EXTENT -155.071035 14.218083 -115.638652 19.924706
+    METADATA
+      "ows_enable_request"  "*"
+      "wms_enable_request"  "*"
+      "wms_title" "BEPARE"
+    END # METADATA
+    NAME "BEPARE"
+    STATUS OFF
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      STYLE
+        COLOR 247 237 219
+        OUTLINECOLOR 120 120 120
+      END # STYLE
+    END # CLASS
+  END # LAYER
+
+
+  LAYER
+    CONNECTION "C:\\ms4w\apps\\CA_ENCs\\ENC_ROOT\\US1WC01M\\US1WC01M.000"
+    CONNECTIONTYPE OGR
+    DATA "DEPARE"
+    EXTENT -138.741336 30.712360 -115.317922 56.201147
+    METADATA
+      "ows_enable_request"  "*"
+      "wms_enable_request"  "*"
+      "wms_title" "CEPARE"
+    END # METADATA
+    NAME "CEPARE"
+    STATUS OFF
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      STYLE
+        COLOR 247 237 219
+        OUTLINECOLOR 120 120 120
+      END # STYLE
+    END # CLASS
+  END # LAYER
+
+
+  LAYER
+    CONNECTION "C:\\ms4w\apps\\CA_ENCs\\ENC_ROOT\\US1WC07M\\US1WC07M.000"
+    CONNECTIONTYPE OGR
+    DATA "DEPARE"
+    EXTENT -180.000000 15.620024 -113.683697 62.464011
+    METADATA
+      "ows_enable_request"  "*"
+      "wms_enable_request"  "*"
+      "wms_title" "DEPARE"
+    END # METADATA
+    NAME "DEPARE"
+    STATUS OFF
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      STYLE
+        COLOR 247 237 219
+        OUTLINECOLOR 120 120 120
+      END # STYLE
+    END # CLASS
+  END # LAYER
+
+  LAYER
+    CONNECTION "C:\\ms4w\apps\\CA_ENCs\\ENC_ROOT\\US2WC05M\\US2WC05M.000"
+    CONNECTIONTYPE OGR
+    DATA "DEPARE"
+    EXTENT -126.320954 31.376655 -116.128068 38.182665
+    METADATA
+      "ows_enable_request"  "*"
+      "wms_enable_request"  "*"
+      "wms_title" "EEPARE"
+    END # METADATA
+    NAME "EEPARE"
+    STATUS OFF
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      STYLE
+        COLOR 247 237 219
+        OUTLINECOLOR 120 120 120
+      END # STYLE
+    END # CLASS
+  END # LAYER
+
+
+  LAYER
+    CONNECTION "C:\\ms4w\apps\\CA_ENCs\\ENC_ROOT\\US2WC11M\\US2WC11M.000"
+    CONNECTIONTYPE OGR
+    DATA "DEPARE"
+    EXTENT -133.533157 30.245151 -115.826452 40.905683
+    METADATA
+      "ows_enable_request"  "*"
+      "wms_enable_request"  "*"
+      "wms_title" "FEPARE"
+    END # METADATA
+    NAME "FEPARE"
+    STATUS OFF
+    TEMPLATE "query"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      STYLE
+        COLOR 247 237 219
+        OUTLINECOLOR 120 120 120
+      END # STYLE
+    END # CLASS
+  END # LAYER
+
+
+
+    LAYER
+    CONNECTIONTYPE OGR
+    CONNECTION "MSSQL:server=.\MSSQLSERVERR2;database=WebApiApp;trusted_connection=yes;tables=Airports(ogr_geometry)"
+    NAME airports
+    TYPE POINT
+     PROJECTION
+    "init=epsg:4326"
+    END # PROJECTION
+    STATUS OFF
+    CLASS
+      NAME 'Airports'
+      STYLE
+        COLOR 128 150 180
+        SYMBOL 'star'
+        SIZE 10
+      END
+      
+    END
+
+    
+  END
+
+
+  LAYER
+    CONNECTIONTYPE OGR
+    CONNECTION "MSSQL:server=.\MSSQLSERVERR2;database=WebApiApp;trusted_connection=yes;tables=Cities(ogr_geometry)"
+    NAME cities
+    TYPE POINT
+    
+    STATUS OFF
+    CLASS
+      NAME 'cities'
+      STYLE
+        COLOR 80 150 20
+        SYMBOL 'circle'
+        SIZE 10
+      END
+      
+    END
+
+    
+  END
+
+
+
+  
+
+   
+  
+
+
+   
+
+END # MAP
